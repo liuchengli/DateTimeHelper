@@ -325,4 +325,31 @@
     
 }
 
+
++ (NSString *)secondsToDateFormatted:(NSString *)totalSeconds;
+
+{
+    
+    NSString *str1=[NSString stringWithFormat:@"%@",totalSeconds];
+    
+    double x=[[str1 substringToIndex:10] doubleValue];
+    
+    
+    NSDate *date2 = [NSDate dateWithTimeIntervalSince1970:x];
+    
+    
+    NSDateFormatter *dateformatter=[[NSDateFormatter alloc]init];
+    
+    [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    
+    NSString *dateString = [dateformatter stringFromDate:date2];
+    
+    
+    return dateString;
+    
+    
+    
+    
+}
+
 @end

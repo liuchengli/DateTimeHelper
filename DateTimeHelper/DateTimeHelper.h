@@ -114,4 +114,9 @@
 + (NSString *)dateFormatterWithInputDateString:(NSString *)dateString
                       inputDateStringFormatter:(NSString *)inputDateStringFormatter
                      outputDateStringFormatter:(NSString *)outputDateStringFormatter;
+
+
+
+// 给定总秒数，返回日期和时间，例如：YYYY-MM-dd HH:mm:ss
++ (NSString *)secondsToDateFormatted:(NSString *)totalSeconds;
 @end
